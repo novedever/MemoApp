@@ -1,10 +1,11 @@
 import React from 'react';
 import {
-  View, Text, TextInput, StyleSheet, KeyboardAvoidingView,
+  View, TextInput, StyleSheet, KeyboardAvoidingView,
 } from 'react-native';
 
 import Appbar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';
+// import KeyboardSafeView from '../components/KeyboardSafeView';
 
 export default function MemoCreateScreen() {
   return (
