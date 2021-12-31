@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  View, Text, StyleSheet, TouchableOpacity,
+} from 'react-native';
 import { TextInput } from 'react-native-web';
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
@@ -15,7 +17,9 @@ export default function LoginScreen() {
         <Button label="Submit" />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Not resistered?</Text>
-          <Text style={styles.footerLink}>Sign up here!</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Sign up here!</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
