@@ -6,7 +6,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import {
   shape, string, instanceOf, arrayOf,
-} from 'prop-types'
+} from 'prop-types';
 
 import { dateToString } from '../utils';
 
