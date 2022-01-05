@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-web';
+import {
+  View, Text, StyleSheet, TextInput,
+} from 'react-native';
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
 
