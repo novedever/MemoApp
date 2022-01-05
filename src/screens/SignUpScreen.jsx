@@ -1,13 +1,7 @@
 import React from 'react';
 import {
-<<<<<<< HEAD
-  View, Text, StyleSheet, TextInput,
+  View, Text, StyleSheet, TouchableOpacity, TextInput,
 } from 'react-native';
-=======
-  View, Text, StyleSheet, TouchableOpacity,
-} from 'react-native';
-import { TextInput } from 'react-native-web';
->>>>>>> cfd23bf9fa815685209c7592acc223a443bdf62e
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
 
