@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da073e1f-9a02-4696-8522-79f6b39c6166" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -44,9 +45,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-7" y="3" width="1036" height="733" key="AVDManager" timestamp="1641458382698">
+    <state x="333" y="176" width="1036" height="733" key="AVDManager" timestamp="1641619938229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-7" y="3" width="1036" height="733" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1641458382698" />
+    <state x="333" y="176" width="1036" height="733" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1641619938229" />
   </component>
 </project>
