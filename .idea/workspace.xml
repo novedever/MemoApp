@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da073e1f-9a02-4696-8522-79f6b39c6166" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MemoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MemoList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/LoginScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LoginScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MemoCreateScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MemoCreateScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MemoDetailScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MemoDetailScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MemoEditScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MemoEditScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MemoListScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MemoListScreen.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/SignUpScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SignUpScreen.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
