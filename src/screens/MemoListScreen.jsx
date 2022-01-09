@@ -12,6 +12,7 @@ export default function MemoListScreen(props) {
 
   useEffect(() => {
     navigation.setOptions({
+      /* eslint-disable-next-line */
       headerRight: () => <LogOutButton />,
     });
   }, []);
