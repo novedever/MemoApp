@@ -13,13 +13,12 @@ import SignUpScreen from './src/screens/SignUpScreen';
 
 const Stack = createStackNavigator();
 require('firebase/firestore');
-
+LogBox.ignoreLogs(['Setting a timer']);
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
 export default function App() {
-  LogBox.ignoreLogs(['Setting a timer']);
   return (
     <NavigationContainer>
       <Stack.Navigator
