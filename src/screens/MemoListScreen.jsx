@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Alert, Text } from 'react-native';
+import {
+  View, StyleSheet, Alert, Text,
+} from 'react-native';
 import firebase from 'firebase';
 
 import MemoList from '../components/MemoList';
@@ -14,6 +16,7 @@ export default function MemoListScreen(props) {
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
     navigation.setOptions({
+      /* eslint-disable-next-line */
       headerRight: () => <LogOutButton />,
     });
   }, []);
@@ -29,7 +32,6 @@ export default function MemoListScreen(props) {
         const userMemos = [];
 
         snapshot.forEach((doc) => {
-          console.log(doc.id, doc.data());
           const data = doc.data();
           userMemos.push({
             id: doc.id,
@@ -39,8 +41,7 @@ export default function MemoListScreen(props) {
         });
         setMemos(userMemos);
         setLoading(false);
-      }, (error) => {
-        console.log(error);
+      }, () => {
         setLoading(false);
         Alert.alert('データの読込みに失敗しました。');
       });
@@ -50,7 +51,7 @@ export default function MemoListScreen(props) {
 
   if (memos.length === 0) {
     return (
-      <View style={emptyStyles.contaioner}>
+      <View style={emptyStyles.container}>
         <Loading isLoading={isLoading} />
         <View style={emptyStyles.inner}>
           <Text style={emptyStyles.title}>最初のメモを作ろう!</Text>
@@ -63,6 +64,7 @@ export default function MemoListScreen(props) {
       </View>
     );
   }
+
   return (
     <View style={styles.container}>
       <MemoList memos={memos} />

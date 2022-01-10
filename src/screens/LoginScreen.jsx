@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, Alert,
+  View, Text, StyleSheet, TouchableOpacity, TextInput, Alert,
 } from 'react-native';
-import { TextInput } from 'react-native-web';
-import Button from '../components/Button';
 import firebase from 'firebase';
+import Button from '../components/Button';
 import Loading from '../components/loading';
+import { translateErrors } from '../utils';
 
 export default function LoginScreen(props) {
   const { navigation } = props;
@@ -30,21 +30,21 @@ export default function LoginScreen(props) {
   function handlePress() {
     setLoading(true);
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        const { user } = userCredential;
-        console.log(user.uid);
+      .then(() => {
         navigation.reset({
           index: 0,
           routes: [{ name: 'MemoList' }],
         });
       })
       .catch((error) => {
-        Alert.alert(error.code);
+        const errorMsg = translateErrors(error.code);
+        Alert.alert(errorMsg.title, errorMsg.description);
       })
       .then(() => {
         setLoading(false);
       });
   }
+
   return (
     <View style={styles.container}>
       <Loading isLoading={isLoading} />
@@ -55,9 +55,9 @@ export default function LoginScreen(props) {
           value={email}
           onChangeText={(text) => { setEmail(text); }}
           autoCapitalize="none"
-          keyboardType="email-adress"
-          placeholder="Email Adress"
-          textContentType="emailAdress"
+          keyboardType="email-address"
+          placeholder="Email Address"
+          textContentType="emailAddress"
         />
         <TextInput
           style={styles.input}
@@ -70,6 +70,7 @@ export default function LoginScreen(props) {
         />
         <Button
           label="Submit"
+          /* eslint-disable-next-line */
           onPress= {handlePress}
         />
         <View style={styles.footer}>

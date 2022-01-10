@@ -1,5 +1,5 @@
-import { bool } from "prop-types";
-import React from "react";
+import { bool } from 'prop-types';
+import React from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
 
 export default function Loading(props) {
@@ -9,7 +9,7 @@ export default function Loading(props) {
   }
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.inner}>
         <ActivityIndicator size="large" color="#000000" />
       </View>
     </View>

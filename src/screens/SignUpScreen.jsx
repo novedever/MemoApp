@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, Alert,
+  View, Text, StyleSheet, TouchableOpacity, TextInput, Alert,
 } from 'react-native';
 import firebase from 'firebase';
-import { TextInput } from 'react-native-web';
 import Button from '../components/Button';
+import { translateErrors } from '../utils';
 
 export default function SignUpScreen(props) {
   const { navigation } = props;
@@ -14,17 +14,14 @@ export default function SignUpScreen(props) {
   function handlePress() {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(() => {
-        // userCredential
-        // const { user } = userCredential;
-        // console.log(user.uid);
         navigation.reset({
           index: 0,
           routes: [{ name: 'MemoList' }],
         });
       })
       .catch((error) => {
-        // console.log(error.code, error.message);
-        Alert.alert(error.code);
+        const errorMsg = translateErrors(error.code);
+        Alert.alert(errorMsg.title, errorMsg.description);
       });
   }
 
@@ -37,9 +34,9 @@ export default function SignUpScreen(props) {
           value={email}
           onChangeText={(text) => { setEmail(text); }}
           autoCapitalize="none"
-          keyboardType="email-adress"
-          placeholder="Email Adress"
-          textContentType="emailAdress"
+          keyboardType="email-address"
+          placeholder="Email Address"
+          textContentType="emailAddress"
         />
         <TextInput
           style={styles.input}
@@ -52,7 +49,8 @@ export default function SignUpScreen(props) {
         />
         <Button
           label="Submit"
-          onPress={handlePress()}
+          /* eslint-disable-next-line */
+          onPress={handlePress}
         />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already resistered?</Text>
